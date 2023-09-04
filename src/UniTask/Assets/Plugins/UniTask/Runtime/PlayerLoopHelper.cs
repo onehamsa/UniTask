@@ -332,11 +332,13 @@ namespace Cysharp.Threading.Tasks
 
         private static void ForceEditorPlayerLoopUpdate()
         {
+        /*
             if ((EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isPaused) || EditorApplication.isCompiling || EditorApplication.isUpdating)
             {
                 // Not in Edit mode, don't interfere
                 return;
             }
+            */
 
             // EditorApplication.QueuePlayerLoopUpdate causes performance issue, don't call directly.
             // EditorApplication.QueuePlayerLoopUpdate();
