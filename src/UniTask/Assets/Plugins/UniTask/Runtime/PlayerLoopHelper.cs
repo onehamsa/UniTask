@@ -332,7 +332,7 @@ namespace Cysharp.Threading.Tasks
 
         private static void ForceEditorPlayerLoopUpdate()
         {
-            if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling || EditorApplication.isUpdating)
+            if ((EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isPaused) || EditorApplication.isCompiling || EditorApplication.isUpdating)
             {
                 // Not in Edit mode, don't interfere
                 return;
